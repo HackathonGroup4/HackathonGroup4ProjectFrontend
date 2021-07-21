@@ -1,4 +1,6 @@
 import React from 'react';
+import SearchBar from "material-ui-search-bar";
+import './main.scss';
 class SearchBox extends React.Component {
   constructor(props) {
     super(props);
@@ -10,24 +12,25 @@ class SearchBox extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  handleChange(value) {
+    this.setState({value: value});
   }
 
-  handleSubmit(event) {
-    alert('Your DA command was submitted: ' + this.state.value);
-    event.preventDefault();
+  handleSubmit(value) {
+    alert('Your DA command was submitted: ' + value);
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          DA Command:
-          <textarea value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+    <div className="search-bar">
+      <SearchBar
+          value={this.state.value}
+          onChange={(newValue) => this.setState({ value: newValue })}
+          onRequestSearch={() => this.handleSubmit(this.state.value)}
+          placeholder='Search & more..'
+        />
+        <div>{this.state.value}</div>
+    </div>
     );
   }
 }
