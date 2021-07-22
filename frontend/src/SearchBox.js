@@ -2,7 +2,7 @@ import React from 'react';
 import SearchBar from "material-ui-search-bar";
 import './main.scss';
 import { createBrowserHistory } from 'history';
-import { retrieveCommand } from './retrieveCommand';
+import axios from 'axios';
 
 class SearchBox extends React.Component {
   history = createBrowserHistory({forceRefresh: true});
@@ -11,18 +11,12 @@ class SearchBox extends React.Component {
     this.state = {
       value: ''
     };
-
-    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(value) {
-    this.setState({value: value});
-  }
-
-  handleSubmit(value) {
-    var response = retrieveCommand(value);
-    this.props.onOutputReceived(response);
+  handleSubmit() {
+    var url = '/hackathon/ask?query=' + this.state.value
+    axios.get(url).then(response => this.props.onOutputReceived(response.data.command))
 
   }
 
@@ -33,7 +27,7 @@ class SearchBox extends React.Component {
           <SearchBar
               value={this.state.value}
               onChange={(newValue) => this.setState({ value: newValue })}
-              onRequestSearch={() => this.handleSubmit(this.state.value)}
+              onRequestSearch={ this.handleSubmit }
               placeholder='Search & more..'
             />
         </div>
