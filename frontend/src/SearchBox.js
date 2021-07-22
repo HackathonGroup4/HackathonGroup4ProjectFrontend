@@ -16,8 +16,9 @@ class SearchBox extends React.Component {
 
   handleSubmit() {
     var url = '/hackathon/ask?query=' + this.state.value
-    axios.get(url).then(response => this.props.onOutputReceived(response.data.command))
-
+    axios.get(url).then(response => {this.props.onOutputReceived(response.data.command);
+    console.log("response",response.data.command)})
+    //console.log("response",response.data.command)
   }
 
   render() {
