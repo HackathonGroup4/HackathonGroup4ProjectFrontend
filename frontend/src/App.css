@@ -1,5 +1,28 @@
 .App {
   text-align: center;
+  display: 'flex';
+  alignItems: 'center';
+  justifyContent: 'center';
+}
+
+.outputBox {
+    height: 20 vh;
+    width: 20vh;
+    background-color: white;
+}
+
+.Search-area {
+  margin-top: 20vh;
+  height: 10vh;
+  padding-left : 2vh;
+  background-color: #7399C6;
+  font-family: goldman-sans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.search-box {
+    margin-top: 5vh;
 }
 
 .App-logo {

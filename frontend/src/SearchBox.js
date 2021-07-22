@@ -31,7 +31,6 @@ class SearchBox extends React.Component {
               placeholder='Search & more..'
             />
         </div>
-        <div float="left">{this.state.value}</div>
     </div>
     );
   }

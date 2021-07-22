@@ -11,11 +11,12 @@ function App() {
       alignItems: 'center',
       justifyContent: 'center',
     }}>
-      <div>
-        <SearchBox />
-        <img src={NotificationIcon} className="notification-icon"/>
-        <img src={HamburgerIcon} className="hamburger-icon"/>
+      <div className = "Search-area">
+        <SearchBox className="search-box"/>
+        <img src={NotificationIcon} className="notification-icon" alt="notification icon"/>
+        <img src={HamburgerIcon} className="hamburger-icon" alt="menu icon"/>
       </div>
+      <div className="outputBox"></div>
     </div>
   );
 }
