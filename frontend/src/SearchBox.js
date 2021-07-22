@@ -23,13 +23,15 @@ class SearchBox extends React.Component {
   render() {
     return (
     <div className="search-bar">
-      <SearchBar
-          value={this.state.value}
-          onChange={(newValue) => this.setState({ value: newValue })}
-          onRequestSearch={() => this.handleSubmit(this.state.value)}
-          placeholder='Search & more..'
-        />
-        <div>{this.state.value}</div>
+      <div>
+          <SearchBar
+              value={this.state.value}
+              onChange={(newValue) => this.setState({ value: newValue })}
+              onRequestSearch={() => this.handleSubmit(this.state.value)}
+              placeholder='Search & more..'
+            />
+        </div>
+        <div float="left">{this.state.value}</div>
     </div>
     );
   }
