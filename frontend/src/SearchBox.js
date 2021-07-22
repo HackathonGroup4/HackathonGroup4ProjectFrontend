@@ -15,7 +15,7 @@ class SearchBox extends React.Component {
   }
 
   handleSubmit() {
-    var url = '/hackathon/ask?query=' + this.state.value
+    var url = 'https://lfrknty04j.execute-api.us-east-1.amazonaws.com/hackathon/ask?query=' + this.state.value
     axios.get(url).then(response => {this.props.onOutputReceived(response.data.command);
     console.log("response",response.data.command)}).catch(error => {
                                                          console.log(error.response.data.error)

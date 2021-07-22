@@ -39,5 +39,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://lfrknty04j.execute-api.us-east-1.amazonaws.com/"
+  "homepage": "."
 }
