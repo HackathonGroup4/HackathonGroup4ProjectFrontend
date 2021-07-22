@@ -5,16 +5,16 @@ import './main.scss';
 
 function App() {
   return (
-    <div className="App" style={{
-               display: 'flex',
-               alignItems: 'center',
-               justifyContent: 'center'}}>
+  <div className="TApp">
+    <div className="App" >
           <div className = "Search-area">
                 <SearchBox/>
                 <img src={NotificationIcon} className="notification-icon" alt="notification icon"/>
                 <img src={HamburgerIcon} className="hamburger-icon" alt="menu icon"/>
           </div>
     </div>
+    <div className="outputBox">DA Command Output</div>
+  </div>
   );
 }
 
