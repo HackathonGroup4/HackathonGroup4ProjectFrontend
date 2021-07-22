@@ -1,4 +1,3 @@
-import './App.css';
 import SearchBox from './SearchBox';
 import NotificationIcon from './notification-icon.png';
 import HamburgerIcon from './Hamburger-Icon.png';
@@ -7,16 +6,14 @@ import './main.scss';
 function App() {
   return (
     <div className="App" style={{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}>
-      <div className = "Search-area">
-        <SearchBox className="search-box"/>
-        <img src={NotificationIcon} className="notification-icon" alt="notification icon"/>
-        <img src={HamburgerIcon} className="hamburger-icon" alt="menu icon"/>
-      </div>
-      <div className="outputBox"></div>
+               display: 'flex',
+               alignItems: 'center',
+               justifyContent: 'center'}}>
+          <div className = "Search-area">
+                <SearchBox/>
+                <img src={NotificationIcon} className="notification-icon" alt="notification icon"/>
+                <img src={HamburgerIcon} className="hamburger-icon" alt="menu icon"/>
+          </div>
     </div>
   );
 }
