@@ -21,10 +21,8 @@ class SearchBox extends React.Component {
   }
 
   handleSubmit(value) {
-    //alert('Your DA command was submitted: ' + value);
-    retrieveCommand(value);
-    //const redirectUrl = 
-    
+    var response = retrieveCommand(value);
+    this.props.onOutputReceived(response);
 
   }
 
