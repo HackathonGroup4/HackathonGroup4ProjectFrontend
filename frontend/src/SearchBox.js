@@ -1,7 +1,11 @@
 import React from 'react';
 import SearchBar from "material-ui-search-bar";
 import './main.scss';
+import { createBrowserHistory } from 'history';
+import { retrieveCommand } from './retrieveCommand';
+
 class SearchBox extends React.Component {
+  history = createBrowserHistory({forceRefresh: true});
   constructor(props) {
     super(props);
     this.state = {
@@ -17,7 +21,11 @@ class SearchBox extends React.Component {
   }
 
   handleSubmit(value) {
-    alert('Your DA command was submitted: ' + value);
+    //alert('Your DA command was submitted: ' + value);
+    retrieveCommand(value);
+    //const redirectUrl = 
+    
+
   }
 
   render() {

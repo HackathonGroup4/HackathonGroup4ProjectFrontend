@@ -12,7 +12,8 @@
     "react-scripts": "4.0.3",
     "react-search-field": "^2.0.1",
     "sass": "^1.35.2",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "axios": "^0.21.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,5 +38,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "lfrknty04j.execute-api.us-east-1.amazonaws.com/"
 }
