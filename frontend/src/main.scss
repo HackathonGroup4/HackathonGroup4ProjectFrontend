@@ -30,6 +30,12 @@
   justifyContent: 'center';
 }
 
+.da-icon {
+     width: 10vh;
+     float: left;
+     margin-top: 0vh;
+}
+
 .search-bar {
     width: 70vh;
     float:left;
@@ -40,7 +46,7 @@
      height: 6vh;
      width: 6vh;
      float:left;
-     margin-top: 1vh;
+     margin-top: 2vh;
      margin-left: 1vh;
 }
 
@@ -48,6 +54,6 @@
      height: 8vh;
      width: 8vh;
      float:left;
-     margin-top: 0vh;
+     margin-top: 1vh;
      margin-left: 0vh;
 }
