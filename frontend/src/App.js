@@ -6,10 +6,16 @@ import './main.scss';
 
 function App() {
   return (
-    <div className="App">
-      <SearchBox />
-      <img src={NotificationIcon} className="notification-icon"/>
-      <img src={HamburgerIcon} className="hamburger-icon"/>
+    <div className="App" style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}>
+      <div>
+        <SearchBox />
+        <img src={NotificationIcon} className="notification-icon"/>
+        <img src={HamburgerIcon} className="hamburger-icon"/>
+      </div>
     </div>
   );
 }
