@@ -17,8 +17,6 @@ class App extends React.Component {
 
   handleChange = (value) => {
      this.setState({value: value});
-     console.log('is hitting handleChange')
-     console.log('value',value)
   }
 
 
