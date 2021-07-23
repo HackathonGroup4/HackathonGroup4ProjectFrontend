@@ -141,9 +141,6 @@ class App extends React.Component {
 
 
   render() {
-      const optionItems = Object.keys(this.state.options).forEach(function(key) {
-        <li key={key}>{this.state.options[key]}</li>
-      })
       return (
         <div className="TApp">
           <div className="App" >
@@ -158,7 +155,11 @@ class App extends React.Component {
             <div>{this.state.title}</div>
             <div>
                 <ul>
-                    {optionItems}
+                    {
+                       this.state.options.map(function(item, i){
+                         return <li>{i}</li>
+                       })
+                    }
                 </ul>
             </div>
           </div>
