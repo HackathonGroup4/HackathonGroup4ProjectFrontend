@@ -4,6 +4,8 @@ import HamburgerIcon from './Hamburger-Icon.png';
 import DAIcon from './DA-icon.png';
 import './main.scss';
 import React from 'react';
+import orbit_1_gettingStarted_icon from './frontend-icons/orbit_1_gettingStarted_icon.png'
+import orbit_2_installGuide_icon from './frontend-icons/orbit_2_installGuide_icon.png'
 
 class App extends React.Component {
    constructor(props) {
@@ -22,15 +24,15 @@ class App extends React.Component {
         this.setState({command: 'orbit'});
         this.setState({title: 'ORBIT results'});
         var orbit_options = [
-           {'orbit-1-gettingStarted-icon':'Getting Started Guide'},
-           {'orbit-2-installGuide-icon':'Installation Guide'},
-           {'orbit-3-requestOrbit-icon':'Request Orbit Suite'},
-           {'orbit-4-manageOrbit-icon':'Manage Orbit Suite'},
-           {'orbit-5-transferOrbit-icon':'Transfer Orbit Token to New Device'},
-           {'orbit-6-reportLost-icon':'Report Lost/Stolen'},
-           {'orbit-7-returnBlackBerry-icon':'Return Blackberry'},
-           {'orbit-8-frequentlyAsked-icon':'Frequently Asked Questions'},
-           {'orbit-9-supportedDevices-icon':'Supported Devices and OS'}
+           {'key':orbit_1_gettingStarted_icon,'value':'Getting Started Guide'},
+           {'key':orbit_2_installGuide_icon,'value':'Installation Guide'},
+           {'key':'orbit-3-requestOrbit-icon','value':'Request Orbit Suite'},
+           {'key':'orbit-4-manageOrbit-icon','value':'Manage Orbit Suite'},
+           {'key':'orbit-5-transferOrbit-icon','value':'Transfer Orbit Token to New Device'},
+           {'key':'orbit-6-reportLost-icon','value':'Report Lost/Stolen'},
+           {'key':'orbit-7-returnBlackBerry-icon','value':'Return Blackberry'},
+           {'key':'orbit-8-frequentlyAsked-icon','value':'Frequently Asked Questions'},
+           {'key':'orbit-9-supportedDevices-icon','value':'Supported Devices and OS'}
          ];
          this.setState({options: orbit_options});
 
@@ -48,9 +50,9 @@ class App extends React.Component {
         this.setState({command: 'teutr'});
         this.setState({title: 'TEUTR results'});
         var teutr_options = [
-           {'teutr-1-icon': 'TEUTR'},
-           {'teutr-2-techTraining-icon': 'TEUTR Technology Training for New Hires'},
-           {'teutr-3-tutor-icon': 'TUTOR'}
+           {'key':'teutr-1-icon','value':'TEUTR'},
+           {'key':'teutr-2-techTraining-icon','value':'TEUTR Technology Training for New Hires'},
+           {'key':'teutr-3-tutor-icon','value':'TUTOR'}
          ]
         this.setState({options: teutr_options});
 
@@ -157,10 +159,11 @@ class App extends React.Component {
                 <ul>
                     {
                        this.state.options.map(function(item, i){
-                         return <li>{i}</li>
+                         return <li><img height='50px' width='2px' src={item.key} className="da-icon" alt="DA icon"/>{item.value}</li>
                        })
                     }
                 </ul>
+                <br/>
             </div>
           </div>
         </div>
