@@ -76,7 +76,7 @@ class App extends React.Component {
   }
   
   handleChange = (command) => {
-     command = 'orbit';
+     command = 'google';
      if (command === 'orbit') {
         this.setState({command: 'orbit'});
         this.setState({title: 'ORBIT SUITE'});
@@ -93,9 +93,9 @@ class App extends React.Component {
          ];
          this.setState({options: orbit_options});
 
-     } else if (command === 'im') {
+     } else if (command ==='im') {
         this.setState({command: 'im'});
-        this.setState({title: 'IM results'});
+        this.setState({title: 'COLLABORATE - IM RESULTS'});
         var im_options = [
            {'key': im_1_searchContact_icon, 'value': 'Searching for a contact?'},
            {'key': im_2_ima_icon, 'value': 'IM someone\'s assistant'},
@@ -105,7 +105,7 @@ class App extends React.Component {
 
      } else if (command === 'teutr') {
         this.setState({command: 'teutr'});
-        this.setState({title: 'TEUTR results'});
+        this.setState({title: 'OTHER APPLICATIONS'});
         var teutr_options = [
            {'key': teutr_1_icon, 'value': 'TEUTR'},
            {'key': teutr_2_techTraining_icon, 'value': 'TEUTR Technology Training for New Hires'},
@@ -115,7 +115,7 @@ class App extends React.Component {
 
      } else if (command === 'mail') {
         this.setState({command: 'mail'});
-        this.setState({title: 'MAIL results'});
+        this.setState({title: 'COLLABORATE - MAIL SOMEONE'});
         var mail_options = [
            {'key': mail_1_searchContact_icon, 'value': 'Searching for a contact?'},
            {'key': mail_2_createEmptyMail_icon, 'value': 'Create an empty mail'},
@@ -123,9 +123,9 @@ class App extends React.Component {
         ];
         this.setState({options: mail_options});
 
-     } else if (command === 'kerb') {
+     } else if (command ==='kerb') {
         this.setState({command: 'kerb'});
-        this.setState({title: 'KERB results'});
+        this.setState({title: 'COLLABORATE - KERB RESULTS'});
         var kerb_options = [
            {'key': kerb_1_searchContact_icon, 'value': 'Searching for a contact?'},
            {'key': kerb_2_kerbA_collaborate_icon, 'value': 'KerbA'},
@@ -137,7 +137,7 @@ class App extends React.Component {
 
      } else if (command === 'help') {
         this.setState({command: 'help'});
-        this.setState({title: 'HELP results'});
+        this.setState({title: 'HELP'});
         var help_options = [
            {'key': help_1_launchHelpDeskApp_icon, 'value': 'Launch Help Desk Application (Lumos)'},
            {'key': help_2_lookingForAnswers_icon, 'value': 'Looking for answers?'},
@@ -149,7 +149,7 @@ class App extends React.Component {
 
      } else if (command === 'time') {
         this.setState({command: 'time'});
-        this.setState({title: 'TIME results'});
+        this.setState({title: 'TIME - PANEL'});
         var time_options = [
          {'key': time_1_closeTheTimePanel_icon, 'value': 'Close the time panel'},
          {'key': time_2_worldClock_icon, 'value': 'Add Word Clock'}
@@ -158,7 +158,7 @@ class App extends React.Component {
 
      } else if (command === 'call') {
         this.setState({command: 'call'});
-        this.setState({title: 'CALL results'});
+        this.setState({title: 'COLLABORATE - CALL SOMEONE'});
         var call_options = [
            {'key': call_1_searchContact_icon, 'value': 'Searching for a contact?'},
            {'key': call_2_Callxxx_icon, 'value': 'Call someone'}
@@ -167,7 +167,7 @@ class App extends React.Component {
 
      } else if (command === 'techrisk') {
         this.setState({command: 'techrisk'});
-        this.setState({title: 'TECHRISK results'});
+        this.setState({title: 'TECHNOLOGY RESULTS'});
         var techrisk_options = [
            {'key': techRisk_1_MyTechRisk_icon, 'value': 'My Tech Risk'},
            {'key': techRisk_2_reportSecurity_icon, 'value': 'Report a Security Incident'},
@@ -178,7 +178,7 @@ class App extends React.Component {
 
      } else if (command === 'enghub') {
         this.setState({command: 'enghub'});
-        this.setState({title: 'ENGHUB results'});
+        this.setState({title: 'OTHER APPLICATIONS'});
         var enghub_options = [
            {'key': enghub_1_engineeringHub_icon, 'value': 'Engineering Hub'},
            {'key': enghub_2_En_icon, 'value': 'EngHub'}
@@ -187,7 +187,7 @@ class App extends React.Component {
 
      } else if (command === 'google') {
        this.setState({command: 'google'});
-       this.setState({title: 'GOOGLE results'});
+       this.setState({title: 'OTHER APPLICATIONS'});
        var google_options = [
           {'key': google_1_google_icon, 'value': 'Google'},
           {'key': google_2_search_icon, 'value': 'Search'},
