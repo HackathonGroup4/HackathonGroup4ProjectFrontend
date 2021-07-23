@@ -4,8 +4,15 @@ import HamburgerIcon from './Hamburger-Icon.png';
 import DAIcon from './DA-icon.png';
 import './main.scss';
 import React from 'react';
-import orbit_1_gettingStarted_icon from './frontend-icons/orbit_1_gettingStarted_icon.png'
-import orbit_2_installGuide_icon from './frontend-icons/orbit_2_installGuide_icon.png'
+import orbit_1_gettingStarted_icon from './frontend-icons/orbit_1_gettingStarted_icon.png';
+import orbit_2_installGuide_icon from './frontend-icons/orbit_2_installGuide_icon.png';
+import orbit_3_requestOrbit_icon from './frontend-icons/orbit-3-requestOrbit-icon.png';
+import orbit_4_manageOrbit_icon from './frontend-icons/orbit-4-manageOrbit-icon.png';
+import orbit_5_transferOrbit_icon from './frontend-icons/orbit-5-transferOrbit-icon.png';
+import orbit_6_reportLost_icon from './frontend-icons/orbit-6-reportLost-icon.png';
+import orbit_7_returnBlackBerry_icon from './frontend-icons/orbit-7-returnBlackBerry-icon.png';
+import orbit_8_frequentlyAsked_icon from './frontend-icons/orbit-8-frequentlyAsked-icon.png';
+import orbit_9_supportedDevices_icon from './frontend-icons/orbit-9-supportedDevices-icon.png';
 
 class App extends React.Component {
    constructor(props) {
@@ -26,13 +33,13 @@ class App extends React.Component {
         var orbit_options = [
            {'key':orbit_1_gettingStarted_icon,'value':'Getting Started Guide'},
            {'key':orbit_2_installGuide_icon,'value':'Installation Guide'},
-           {'key':'orbit-3-requestOrbit-icon','value':'Request Orbit Suite'},
-           {'key':'orbit-4-manageOrbit-icon','value':'Manage Orbit Suite'},
-           {'key':'orbit-5-transferOrbit-icon','value':'Transfer Orbit Token to New Device'},
-           {'key':'orbit-6-reportLost-icon','value':'Report Lost/Stolen'},
-           {'key':'orbit-7-returnBlackBerry-icon','value':'Return Blackberry'},
-           {'key':'orbit-8-frequentlyAsked-icon','value':'Frequently Asked Questions'},
-           {'key':'orbit-9-supportedDevices-icon','value':'Supported Devices and OS'}
+           {'key':orbit_3_requestOrbit_icon,'value':'Request Orbit Suite'},
+           {'key':orbit_4_manageOrbit_icon,'value':'Manage Orbit Suite'},
+           {'key':orbit_5_transferOrbit_icon,'value':'Transfer Orbit Token to New Device'},
+           {'key':orbit_6_reportLost_icon,'value':'Report Lost/Stolen'},
+           {'key':orbit_7_returnBlackBerry_icon,'value':'Return Blackberry'},
+           {'key':orbit_8_frequentlyAsked_icon,'value':'Frequently Asked Questions'},
+           {'key':orbit_9_supportedDevices_icon,'value':'Supported Devices and OS'}
          ];
          this.setState({options: orbit_options});
 
@@ -40,9 +47,9 @@ class App extends React.Component {
         this.setState({command: 'im'});
         this.setState({title: 'IM results'});
         var im_options = [
-           {'im-1-searchContact-icon': 'Searching for a contact?'},
-           {'im-2-ima-icon': 'IM someone\'s assistant'},
-           {'im-3-goldmanStacks-icon': 'Goldman Stacks'}
+           {'key': im_1_searchContact_icon, 'value': 'Searching for a contact?'},
+           {'key': im_2_ima_icon, 'value': 'IM someone\'s assistant'},
+           {'key': im_3_goldmanStacks_icon, 'value': 'Goldman Stacks'}
         ];
         this.setState({options: im_options});
 
@@ -50,9 +57,9 @@ class App extends React.Component {
         this.setState({command: 'teutr'});
         this.setState({title: 'TEUTR results'});
         var teutr_options = [
-           {'key':'teutr-1-icon','value':'TEUTR'},
-           {'key':'teutr-2-techTraining-icon','value':'TEUTR Technology Training for New Hires'},
-           {'key':'teutr-3-tutor-icon','value':'TUTOR'}
+           {'key': teutr_1_icon, 'value': 'TEUTR'},
+           {'key': teutr_2_techTraining_icon, 'value': 'TEUTR Technology Training for New Hires'},
+           {'key':'teutr_3_tutor_icon','value': 'TUTOR'}
          ]
         this.setState({options: teutr_options});
 
@@ -60,9 +67,9 @@ class App extends React.Component {
         this.setState({command: 'mail'});
         this.setState({title: 'MAIL results'});
         var mail_options = [
-           {'mail-1-searchContact-icon': 'Searching for a contact?'},
-           {'mail-2-createEmptyMail-icon': 'Create an empty mail'},
-           {'mail-3-mail-icon': 'Mail someone'}
+           {'key': mail_1_searchContact_icon, 'value': 'Searching for a contact?'},
+           {'key': mail_2_createEmptyMail_icon, 'value': 'Create an empty mail'},
+           {'key': mail_3_mail_icon, 'value': 'Mail someone'}
         ];
         this.setState({options: mail_options});
 
@@ -70,10 +77,10 @@ class App extends React.Component {
         this.setState({command: 'kerb'});
         this.setState({title: 'KERB results'});
         var kerb_options = [
-           {'kerb-1-searchContact-icon': 'Searching for a contact?'},
-           {'kerb-2-kerbA-collaborate-icon': 'KerbA'},
-           {'kerb-3-reportingGroup-icon': 'Reporting Group'},
-           {'kerb-4-ABOCluster-icon': 'ABOCluster'}
+           {'key': kerb_1_searchContact_icon, 'value': 'Searching for a contact?'},
+           {'key': kerb_2_kerbA_collaborate_icon, 'value': 'KerbA'},
+           {'key': kerb_3_reportingGroup_icon, 'value': 'Reporting Group'},
+           {'key': kerb_4_ABOCluster_icon, 'value': 'ABOCluster'}
         ];
         this.setState({options: kerb_options});
 
@@ -82,11 +89,11 @@ class App extends React.Component {
         this.setState({command: 'help'});
         this.setState({title: 'HELP results'});
         var help_options = [
-           {'help-1-launchHelpDeskApp-icon': 'Launch Help Desk Application (Lumos)'},
-           {'help-2-lookingForAnswers-icon': 'Looking for answers?'},
-           {'help-3-DAFeedback-icon': 'DA Feedback'},
-           {'help-4-DATelephonyFeedback-icon': 'DA Telephony Feedback'},
-           {'help-5-Docs-icon': 'Docs'}
+           {'key': help_1_launchHelpDeskApp_icon, 'value': 'Launch Help Desk Application (Lumos)'},
+           {'key': help_2_lookingForAnswers_icon, 'value': 'Looking for answers?'},
+           {'key': help_3_DAFeedback_icon, 'value': 'DA Feedback'},
+           {'key': help_4_DATelephonyFeedback_icon, 'value': 'DA Telephony Feedback'},
+           {'key': help_5_Docs_icon, 'value': 'Docs'}
         ];
         this.setState({options: help_options});
 
@@ -94,8 +101,8 @@ class App extends React.Component {
         this.setState({command: 'time'});
         this.setState({title: 'TIME results'});
         var time_options = [
-         {'time-1-closeTheTimePanel-icon': 'Close the time panel'},
-         {'time-2-worldClock-icon': 'Add Word Clock'}
+         {'key': time_1_closeTheTimePanel_icon, 'value': 'Close the time panel'},
+         {'key': time_2_worldClock_icon, 'value': 'Add Word Clock'}
         ];
         this.setState({options: time_options});
 
@@ -103,8 +110,8 @@ class App extends React.Component {
         this.setState({command: 'call'});
         this.setState({title: 'CALL results'});
         var call_options = [
-           {'call-1-searchContact-icon': 'Searching for a contact?'},
-           {'call-2-Callxxx-icon': 'Call someone'}
+           {'key': call_1_searchContact_icon, 'value': 'Searching for a contact?'},
+           {'key': call_2_Callxxx_icon, 'value': 'Call someone'}
         ];
         this.setState({options: call_options});
 
@@ -112,10 +119,10 @@ class App extends React.Component {
         this.setState({command: 'techrisk'});
         this.setState({title: 'TECHRISK results'});
         var techrisk_options = [
-           {'techRisk-1-MyTechRisk-icon': 'My Tech Risk'},
-           {'techRisk-2-reportSecurity-icon': 'Report a Security Incident'},
-           {'techRisk-3-RequestSiteUnblock-icon': 'Request Site Unblock'},
-           {'techRisk-4-SendDataSecurely-icon': 'Send Data Securely'}
+           {'key': techRisk_1_MyTechRisk_icon, 'value': 'My Tech Risk'},
+           {'key': techRisk_2_reportSecurity_icon, 'value': 'Report a Security Incident'},
+           {'key': techRisk_3_RequestSiteUnblock_icon, 'value': 'Request Site Unblock'},
+           {'key': techRisk_4_SendDataSecurely_icon, 'value': 'Send Data Securely'}
         ];
         this.setState({options: techrisk_options});
 
@@ -123,8 +130,8 @@ class App extends React.Component {
         this.setState({command: 'enghub'});
         this.setState({title: 'ENGHUB results'});
         var enghub_options = [
-           {'enghub-1-engineeringHub-icon': 'Engineering Hub'},
-           {'enghub-2-En-icon': 'EngHub'}
+           {'key': enghub_1_engineeringHub_icon, 'value': 'Engineering Hub'},
+           {'key': enghub_2_En_icon, 'value': 'EngHub'}
         ];
         this.setState({options: enghub_options});
 
@@ -132,9 +139,9 @@ class App extends React.Component {
        this.setState({command: 'google'});
        this.setState({title: 'GOOGLE results'});
        var google_options = [
-          {'google-1-google-icon': 'Google'},
-          {'google-2-search-icon': 'Search'},
-          {'google-3-stratsGoogle-icon': 'Strats Google'}
+          {'key': google_1_google_icon, 'value': 'Google'},
+          {'key': google_2_search_icon, 'value': 'Search'},
+          {'key': google_3_stratsGoogle_icon, 'value': 'Strats Google'}
        ];
        this.setState({options: google_options});
 
@@ -159,11 +166,15 @@ class App extends React.Component {
                 <ul>
                     {
                        this.state.options.map(function(item, i){
-                         return <li><img height='50px' width='2px' src={item.key} className="da-icon" alt="DA icon"/>{item.value}</li>
+                         return (
+                           <div>
+                              <li><img height='70px' width='1px' src={item.key} className="da-icon" alt="DA icon"/>{item.value}</li>
+                              <br></br><br></br><br></br><br></br>
+                           </div>
+                         );
                        })
                     }
                 </ul>
-                <br/>
             </div>
           </div>
         </div>
