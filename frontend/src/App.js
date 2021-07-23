@@ -4,8 +4,9 @@ import HamburgerIcon from './Hamburger-Icon.png';
 import DAIcon from './DA-icon.png';
 import './main.scss';
 import React from 'react';
-import orbit_1_gettingStarted_icon from './frontend-icons/orbit_1_gettingStarted_icon.png';
-import orbit_2_installGuide_icon from './frontend-icons/orbit_2_installGuide_icon.png';
+
+import orbit_1_gettingStarted_icon from './frontend-icons/orbit-1-gettingStarted-icon.png';
+import orbit_2_installGuide_icon from './frontend-icons/orbit-2-installGuide-icon.png';
 import orbit_3_requestOrbit_icon from './frontend-icons/orbit-3-requestOrbit-icon.png';
 import orbit_4_manageOrbit_icon from './frontend-icons/orbit-4-manageOrbit-icon.png';
 import orbit_5_transferOrbit_icon from './frontend-icons/orbit-5-transferOrbit-icon.png';
@@ -13,6 +14,47 @@ import orbit_6_reportLost_icon from './frontend-icons/orbit-6-reportLost-icon.pn
 import orbit_7_returnBlackBerry_icon from './frontend-icons/orbit-7-returnBlackBerry-icon.png';
 import orbit_8_frequentlyAsked_icon from './frontend-icons/orbit-8-frequentlyAsked-icon.png';
 import orbit_9_supportedDevices_icon from './frontend-icons/orbit-9-supportedDevices-icon.png';
+
+import im_1_searchContact_icon from './frontend-icons/im-1-searchContact-icon.png';
+import im_2_ima_icon from './frontend-icons/im-2-ima-icon.png';
+import im_3_goldmanStacks_icon from './frontend-icons/im-3-goldmanStacks-icon.png';
+
+import teutr_1_icon from './frontend-icons/teutr-1-icon.png';
+import teutr_2_techTraining_icon from './frontend-icons/teutr-2-techTraining-icon.png';
+import teutr_3_tutor_icon from './frontend-icons/teutr-3-tutor-icon.png';
+
+import mail_1_searchContact_icon from './frontend-icons/mail-1-searchContact-icon.png';
+import mail_2_createEmptyMail_icon from './frontend-icons/mail-2-createEmptyMail-icon.png';
+import mail_3_mail_icon from './frontend-icons/mail-3-mail-icon.png';
+
+import kerb_1_searchContact_icon from './frontend-icons/kerb-1-searchContact-icon.png';
+import kerb_2_kerbA_collaborate_icon from './frontend-icons/kerb-2-kerbA-collaborate-icon.png';
+import kerb_3_reportingGroup_icon from './frontend-icons/kerb-3-reportingGroup-icon.png';
+import kerb_4_ABOCluster_icon from './frontend-icons/kerb-4-ABOCluster-icon.png';
+
+import help_1_launchHelpDeskApp_icon from './frontend-icons/help-1-launchHelpDeskApp-icon.png';
+import help_2_lookingForAnswers_icon from './frontend-icons/help-2-lookingForAnswers-icon.png';
+import help_3_DAFeedback_icon from './frontend-icons/help-3-DAFeedback-icon.png';
+import help_4_DATelephonyFeedback_icon from './frontend-icons/help-4-DATelephonyFeedback-icon.png';
+import help_5_Docs_icon from './frontend-icons/help-5-Docs-icon.png';
+
+import time_1_closeTheTimePanel_icon from './frontend-icons/time-1-closeTheTimePanel-icon.png';
+import time_2_worldClock_icon from './frontend-icons/time-2-worldClock-icon.png';
+
+import call_1_searchContact_icon from './frontend-icons/call-1-searchContact-icon.png';
+import call_2_Callxxx_icon from './frontend-icons/call-2-Callxxx-icon.png';
+
+import techRisk_1_MyTechRisk_icon from './frontend-icons/techRisk-1-MyTechRisk-icon.png';
+import techRisk_2_reportSecurity_icon from './frontend-icons/techRisk-2-reportSecurity-icon.png';
+import techRisk_3_RequestSiteUnblock_icon from './frontend-icons/techRisk-3-RequestSiteUnblock-icon.png';
+import techRisk_4_SendDataSecurely_icon from './frontend-icons/techRisk-4-SendDataSecurely-icon.png';
+
+import enghub_1_engineeringHub_icon from './frontend-icons/enghub-1-engineeringHub-icon.png';
+import enghub_2_En_icon from './frontend-icons/enghub-2-En-icon.png';
+
+import google_1_google_icon from './frontend-icons/google-1-google-icon.png';
+import google_2_search_icon from './frontend-icons/google-2-search-icon.png';
+import google_3_stratsGoogle_icon from './frontend-icons/google-3-stratsGoogle-icon.png';
 
 class App extends React.Component {
    constructor(props) {
@@ -26,7 +68,7 @@ class App extends React.Component {
   }
   
   handleChange = (command) => {
-     command = 'orbit';
+     //command = 'orbit';
      if (command === 'orbit') {
         this.setState({command: 'orbit'});
         this.setState({title: 'ORBIT results'});
@@ -59,7 +101,7 @@ class App extends React.Component {
         var teutr_options = [
            {'key': teutr_1_icon, 'value': 'TEUTR'},
            {'key': teutr_2_techTraining_icon, 'value': 'TEUTR Technology Training for New Hires'},
-           {'key':'teutr_3_tutor_icon','value': 'TUTOR'}
+           {'key': teutr_3_tutor_icon,'value': 'TUTOR'}
          ]
         this.setState({options: teutr_options});
 
@@ -135,7 +177,8 @@ class App extends React.Component {
         ];
         this.setState({options: enghub_options});
 
-     } else if (command === 'google') {
+     } else {
+       //if (command === 'google') {
        this.setState({command: 'google'});
        this.setState({title: 'GOOGLE results'});
        var google_options = [
