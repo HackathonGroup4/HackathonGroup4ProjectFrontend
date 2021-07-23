@@ -76,7 +76,6 @@ class App extends React.Component {
   }
   
   handleChange = (command) => {
-     command = 'google';
      if (command === 'orbit') {
         this.setState({command: 'orbit'});
         this.setState({title: 'ORBIT SUITE'});
