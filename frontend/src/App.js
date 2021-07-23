@@ -130,9 +130,9 @@ class App extends React.Component {
        this.setState({command: 'google'});
        this.setState({title: 'GOOGLE results'});
        var google_options = [
-          {'1': 'Google'},
-          {'2': 'Search'},
-          {'3': 'Strats Google'}
+          {'google-1-google-icon': 'Google'},
+          {'google-2-search-icon': 'Search'},
+          {'google-3-stratsGoogle-icon': 'Strats Google'}
        ];
        this.setState({options: google_options});
 
