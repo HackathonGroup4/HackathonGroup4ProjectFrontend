@@ -55,6 +55,14 @@ import enghub_2_En_icon from './frontend-icons/enghub-2-En-icon.png';
 import google_1_google_icon from './frontend-icons/google-1-google-icon.png';
 import google_2_search_icon from './frontend-icons/google-2-search-icon.png';
 import google_3_stratsGoogle_icon from './frontend-icons/google-3-stratsGoogle-icon.png';
+import { Card, Paper } from '@material-ui/core';
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 135
+  }
+});
 
 class App extends React.Component {
    constructor(props) {
@@ -68,10 +76,10 @@ class App extends React.Component {
   }
   
   handleChange = (command) => {
-     //command = 'orbit';
+     command = 'orbit';
      if (command === 'orbit') {
         this.setState({command: 'orbit'});
-        this.setState({title: 'ORBIT results'});
+        this.setState({title: 'ORBIT SUITE'});
         var orbit_options = [
            {'key':orbit_1_gettingStarted_icon,'value':'Getting Started Guide'},
            {'key':orbit_2_installGuide_icon,'value':'Installation Guide'},
@@ -177,8 +185,7 @@ class App extends React.Component {
         ];
         this.setState({options: enghub_options});
 
-     } else {
-       //if (command === 'google') {
+     } else if (command === 'google') {
        this.setState({command: 'google'});
        this.setState({title: 'GOOGLE results'});
        var google_options = [
@@ -203,15 +210,17 @@ class App extends React.Component {
                       <img src={HamburgerIcon} className="hamburger-icon" alt="menu icon"/>
                 </div>
           </div>
-          <div className="outputBox">
-            <div>{this.state.title}</div>
+          <Paper style={{maxHeight: 400, minHeight: 300, overflow: 'scroll'}} className="outputBox">
+            <div className="CommandTitle">{this.state.title}</div>
             <div>
-                <ul>
+                <ul className="optionList">
                     {
                        this.state.options.map(function(item, i){
                          return (
                            <div>
-                              <li><img height='70px' width='1px' src={item.key} className="da-icon" alt="DA icon"/>{item.value}</li>
+                              <li><img src={item.key} className="da-icon" alt="DA icon"/>
+
+                              <p className="commandText">{item.value}</p></li>
                               <br></br><br></br><br></br><br></br>
                            </div>
                          );
@@ -219,7 +228,7 @@ class App extends React.Component {
                     }
                 </ul>
             </div>
-          </div>
+          </Paper>
         </div>
         );
     }
