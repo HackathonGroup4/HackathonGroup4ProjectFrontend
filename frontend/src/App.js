@@ -96,9 +96,11 @@ class App extends React.Component {
      } else if (command.includes('time')) {
            this.setState({command: 'time'});
            this.setState({title: 'TIME - PANEL'});
+           console.log(command.split(' ').length)
            var time_options = [
-            {'key': time_1_closeTheTimePanel_icon, 'value': 'Close the time panel'},
-            {'key': time_2_worldClock_icon, 'value': 'Add Word Clock'}
+               {'key': time_2_worldClock_icon, 'value': 'Add Word Clock'},
+               {'key': help_2_lookingForAnswers_icon, 'value': 'Check time'},
+               {'key': time_1_closeTheTimePanel_icon, 'value': 'Close the time panel'},
            ];
            this.setState({options: time_options});
 
@@ -126,7 +128,7 @@ class App extends React.Component {
         this.setState({command: 'mail'});
         this.setState({title: 'COLLABORATE - MAIL SOMEONE'});
         var mail_options = [
-            //{'key': mail_1_searchContact_icon, 'value': 'Searching for a contact?'},
+           //{'key': mail_1_searchContact_icon, 'value': 'Searching for a contact?'},
            {'key': mail_2_createEmptyMail_icon, 'value': 'Create an empty mail'},
            {'key': mail_3_mail_icon, 'value': 'Mail someone'}
         ];
@@ -136,10 +138,10 @@ class App extends React.Component {
         this.setState({command: 'kerb'});
         this.setState({title: 'COLLABORATE - KERB RESULTS'});
         var kerb_options = [
-                       {'key': kerb_2_kerbA_collaborate_icon, 'value': 'KerbA'},
-                       {'key': kerb_3_reportingGroup_icon, 'value': 'Reporting Group'},
-                       {'key': kerb_4_ABOCluster_icon, 'value': 'ABOCluster'}
-                    ];
+           {'key': kerb_2_kerbA_collaborate_icon, 'value': 'KerbA'},
+           {'key': kerb_3_reportingGroup_icon, 'value': 'Reporting Group'},
+           {'key': kerb_4_ABOCluster_icon, 'value': 'ABOCluster'}
+        ];
         this.setState({options: kerb_options});
 
 
