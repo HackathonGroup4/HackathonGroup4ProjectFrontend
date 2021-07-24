@@ -76,7 +76,8 @@ class App extends React.Component {
   }
   
   handleChange = (command) => {
-     if (command === 'orbit') {
+     console.log(command)
+     if (command.includes('orbit')) {
         this.setState({command: 'orbit'});
         this.setState({title: 'ORBIT SUITE'});
         var orbit_options = [
@@ -92,7 +93,7 @@ class App extends React.Component {
          ];
          this.setState({options: orbit_options});
 
-     } else if (command ==='im') {
+     } else if (command.includes('im')) {
         this.setState({command: 'im'});
         this.setState({title: 'COLLABORATE - IM RESULTS'});
         var im_options = [
@@ -102,7 +103,7 @@ class App extends React.Component {
         ];
         this.setState({options: im_options});
 
-     } else if (command === 'teutr') {
+     } else if (command.includes('teutr')) {
         this.setState({command: 'teutr'});
         this.setState({title: 'OTHER APPLICATIONS'});
         var teutr_options = [
@@ -112,7 +113,7 @@ class App extends React.Component {
          ]
         this.setState({options: teutr_options});
 
-     } else if (command === 'mail') {
+     } else if (command.includes('mail')) {
         this.setState({command: 'mail'});
         this.setState({title: 'COLLABORATE - MAIL SOMEONE'});
         var mail_options = [
@@ -122,7 +123,7 @@ class App extends React.Component {
         ];
         this.setState({options: mail_options});
 
-     } else if (command ==='kerb') {
+     } else if (command.includes('kerb')) {
         this.setState({command: 'kerb'});
         this.setState({title: 'COLLABORATE - KERB RESULTS'});
         var kerb_options = [
@@ -134,7 +135,7 @@ class App extends React.Component {
         this.setState({options: kerb_options});
 
 
-     } else if (command === 'help') {
+     } else if (command.includes('help')) {
         this.setState({command: 'help'});
         this.setState({title: 'HELP'});
         var help_options = [
@@ -146,7 +147,7 @@ class App extends React.Component {
         ];
         this.setState({options: help_options});
 
-     } else if (command === 'time') {
+     } else if (command.includes('time')) {
         this.setState({command: 'time'});
         this.setState({title: 'TIME - PANEL'});
         var time_options = [
@@ -155,7 +156,7 @@ class App extends React.Component {
         ];
         this.setState({options: time_options});
 
-     } else if (command === 'call') {
+     } else if (command.includes('call')) {
         this.setState({command: 'call'});
         this.setState({title: 'COLLABORATE - CALL SOMEONE'});
         var call_options = [
@@ -164,7 +165,7 @@ class App extends React.Component {
         ];
         this.setState({options: call_options});
 
-     } else if (command === 'techrisk') {
+     } else if (command.includes('techrisk')) {
         this.setState({command: 'techrisk'});
         this.setState({title: 'TECHNOLOGY RESULTS'});
         var techrisk_options = [
@@ -175,7 +176,7 @@ class App extends React.Component {
         ];
         this.setState({options: techrisk_options});
 
-     } else if (command === 'enghub') {
+     } else if (command.includes('enghub')) {
         this.setState({command: 'enghub'});
         this.setState({title: 'OTHER APPLICATIONS'});
         var enghub_options = [
@@ -184,7 +185,7 @@ class App extends React.Component {
         ];
         this.setState({options: enghub_options});
 
-     } else if (command === 'google') {
+     } else if (command.includes('google')) {
        this.setState({command: 'google'});
        this.setState({title: 'OTHER APPLICATIONS'});
        var google_options = [
