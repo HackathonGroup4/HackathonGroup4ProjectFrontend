@@ -93,6 +93,15 @@ class App extends React.Component {
          ];
          this.setState({options: orbit_options});
 
+     } else if (command.includes('time')) {
+           this.setState({command: 'time'});
+           this.setState({title: 'TIME - PANEL'});
+           var time_options = [
+            {'key': time_1_closeTheTimePanel_icon, 'value': 'Close the time panel'},
+            {'key': time_2_worldClock_icon, 'value': 'Add Word Clock'}
+           ];
+           this.setState({options: time_options});
+
      } else if (command.includes('im')) {
         this.setState({command: 'im'});
         this.setState({title: 'COLLABORATE - IM RESULTS'});
@@ -145,15 +154,6 @@ class App extends React.Component {
            {'key': help_5_Docs_icon, 'value': 'Docs'}
         ];
         this.setState({options: help_options});
-
-     } else if (command.includes('time')) {
-        this.setState({command: 'time'});
-        this.setState({title: 'TIME - PANEL'});
-        var time_options = [
-         {'key': time_1_closeTheTimePanel_icon, 'value': 'Close the time panel'},
-         {'key': time_2_worldClock_icon, 'value': 'Add Word Clock'}
-        ];
-        this.setState({options: time_options});
 
      } else if (command.includes('call')) {
         this.setState({command: 'call'});
