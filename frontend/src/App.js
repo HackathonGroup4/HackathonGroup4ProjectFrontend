@@ -97,7 +97,7 @@ class App extends React.Component {
         this.setState({command: 'im'});
         this.setState({title: 'COLLABORATE - IM RESULTS'});
         var im_options = [
-           {'key': im_1_searchContact_icon, 'value': 'Searching for a contact?'},
+           {'key': im_1_searchContact_icon, 'value': 'IM'},
            {'key': im_2_ima_icon, 'value': 'IM someone\'s assistant'},
            {'key': im_3_goldmanStacks_icon, 'value': 'Goldman Stacks'}
         ];
@@ -117,7 +117,7 @@ class App extends React.Component {
         this.setState({command: 'mail'});
         this.setState({title: 'COLLABORATE - MAIL SOMEONE'});
         var mail_options = [
-           {'key': mail_1_searchContact_icon, 'value': 'Searching for a contact?'},
+            //{'key': mail_1_searchContact_icon, 'value': 'Searching for a contact?'},
            {'key': mail_2_createEmptyMail_icon, 'value': 'Create an empty mail'},
            {'key': mail_3_mail_icon, 'value': 'Mail someone'}
         ];
@@ -127,11 +127,10 @@ class App extends React.Component {
         this.setState({command: 'kerb'});
         this.setState({title: 'COLLABORATE - KERB RESULTS'});
         var kerb_options = [
-           {'key': kerb_1_searchContact_icon, 'value': 'Searching for a contact?'},
-           {'key': kerb_2_kerbA_collaborate_icon, 'value': 'KerbA'},
-           {'key': kerb_3_reportingGroup_icon, 'value': 'Reporting Group'},
-           {'key': kerb_4_ABOCluster_icon, 'value': 'ABOCluster'}
-        ];
+                       {'key': kerb_2_kerbA_collaborate_icon, 'value': 'KerbA'},
+                       {'key': kerb_3_reportingGroup_icon, 'value': 'Reporting Group'},
+                       {'key': kerb_4_ABOCluster_icon, 'value': 'ABOCluster'}
+                    ];
         this.setState({options: kerb_options});
 
 
@@ -160,7 +159,7 @@ class App extends React.Component {
         this.setState({command: 'call'});
         this.setState({title: 'COLLABORATE - CALL SOMEONE'});
         var call_options = [
-           {'key': call_1_searchContact_icon, 'value': 'Searching for a contact?'},
+           //{'key': call_1_searchContact_icon, 'value': 'Searching for a contact?'},
            {'key': call_2_Callxxx_icon, 'value': 'Call someone'}
         ];
         this.setState({options: call_options});
