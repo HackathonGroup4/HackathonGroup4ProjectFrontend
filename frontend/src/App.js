@@ -137,11 +137,23 @@ class App extends React.Component {
      } else if (command.includes('kerb')) {
         this.setState({command: 'kerb'});
         this.setState({title: 'COLLABORATE - KERB RESULTS'});
-        var kerb_options = [
-           {'key': kerb_2_kerbA_collaborate_icon, 'value': 'KerbA'},
-           {'key': kerb_3_reportingGroup_icon, 'value': 'Reporting Group'},
-           {'key': kerb_4_ABOCluster_icon, 'value': 'ABOCluster'}
-        ];
+        var kerb_options = []
+        if (command.split(' ').length == 2) {
+            var name = command.split(' ')[1]
+            var value = 'kerb ' + name
+            kerb_options = [
+               {'key': kerb_2_kerbA_collaborate_icon, 'value': value},
+               {'key': kerb_3_reportingGroup_icon, 'value': 'Reporting Group'},
+               {'key': kerb_4_ABOCluster_icon, 'value': 'ABOCluster'}
+            ];
+
+        } else {
+            kerb_options = [
+               {'key': kerb_2_kerbA_collaborate_icon, 'value': 'KerbA'},
+               {'key': kerb_3_reportingGroup_icon, 'value': 'Reporting Group'},
+               {'key': kerb_4_ABOCluster_icon, 'value': 'ABOCluster'}
+            ];
+        }
         this.setState({options: kerb_options});
 
 
