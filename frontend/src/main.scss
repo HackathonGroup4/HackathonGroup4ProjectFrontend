@@ -1,0 +1,78 @@
+.App {
+  display: 'flex';
+  justifyContent: 'center';
+}
+
+.TApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.CommandTitle {
+    color:grey;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    margin-left: 3vh;
+}
+
+.optionList {
+  list-style-type: none;
+  justify-content:center;
+  //margin-left: 1vh;
+}
+
+.commandText{
+    padding-top: 3vh;
+}
+
+.outputBox {
+    width: 135vh;
+    background-color: white;
+//     float:left;
+//     clear: left;
+}
+
+.Search-area {
+  margin-top: 20vh;
+  height: 10vh;
+  padding-left : 2vh;
+  background-color: #7399C6;
+  font-family: goldman-sans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: 'flex';
+  justifyContent: 'center';
+}
+
+.da-icon {
+     width: 10vh;
+     float: left;
+     margin-top: 0vh;
+     margin-bottom: 1vh;
+     margin-right: 2vh;
+}
+
+.search-bar {
+    width: 100vh;
+    float:left;
+    margin-top: 2vh;
+    margin-right: 5vh;
+}
+
+.notification-icon {
+     height: 6vh;
+     width: 6vh;
+     float:left;
+     margin-top: 2vh;
+     margin-right: 2vh;
+}
+
+.hamburger-icon {
+     height: 8vh;
+     width: 8vh;
+     float:left;
+     margin-top: 1vh;
+     margin-left: 0vh;
+}
