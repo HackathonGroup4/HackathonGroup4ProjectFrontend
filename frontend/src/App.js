@@ -117,11 +117,22 @@ class App extends React.Component {
      } else if (command.includes('teutr')) {
         this.setState({command: 'teutr'});
         this.setState({title: 'OTHER APPLICATIONS'});
-        var teutr_options = [
-           {'key': teutr_1_icon, 'value': 'TEUTR'},
-           {'key': teutr_2_techTraining_icon, 'value': 'TEUTR Technology Training for New Hires'},
-           {'key': teutr_3_tutor_icon,'value': 'TUTOR'}
-         ]
+        var teutr_options = []
+        if (command.split(' ').length > 2) {
+            var name = command.substr(command.indexOf(' ')+1);
+            var value = 'teutr ' + name
+            teutr_options = [
+               {'key': teutr_1_icon, 'value': value},
+               {'key': teutr_2_techTraining_icon, 'value': 'TEUTR Technology Training for New Hires'},
+               {'key': teutr_3_tutor_icon,'value': 'TUTOR'}
+            ]
+        } else {
+            teutr_options = [
+               {'key': teutr_1_icon, 'value': 'TEUTR'},
+               {'key': teutr_2_techTraining_icon, 'value': 'TEUTR Technology Training for New Hires'},
+               {'key': teutr_3_tutor_icon,'value': 'TUTOR'}
+            ]
+        }
         this.setState({options: teutr_options});
 
      } else if (command.includes('mail')) {
